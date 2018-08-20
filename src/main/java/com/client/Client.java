@@ -53,7 +53,7 @@ public class Client {
 		Scanner scanner = new Scanner(System.in);
 		while(true){
 			Thread.sleep(200);
-			System.out.println("请输入");
+			System.out.println("Client请输入：(输入ClientLog/SeverLog为查找相应聊天记录)");
 			String chat=scanner.next();
 			if(chat.equals("ClientLog")){
 				System.out.println(chatlog.queryData(jedis,"client"));

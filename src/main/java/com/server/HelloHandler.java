@@ -29,7 +29,7 @@ public class HelloHandler extends SimpleChannelHandler {
 		chatlog.saveData(jedis,"server",chat);
 
 		//回写数据
-		ctx.getChannel().write(chat);
+		ctx.getChannel().write("Server:"+chat);
 		super.messageReceived(ctx, e);
 	}
 
